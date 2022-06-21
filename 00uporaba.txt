@@ -1,0 +1,4 @@
+
+
+
+one way of doing this is using the command line by entering pdflatex yourfilename.tex (assuming MikTex is in your path - just give it a try). 

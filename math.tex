@@ -1,0 +1,194 @@
+\documentclass[12pt, letterpaper, twoside]{article}    %report   ,  a4paper
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amsmath}
+
+\title{First document}
+\author{Hubert Farnsworth\thanks{funded by the Overleaf team}}
+\date{February 2017}
+
+
+% clicking f1 does quickbuild, which is the whole compilation at once
+
+
+
+
+\def\A{
+\begin{bmatrix}
+    x_1 & x_2 & \cdots & x_N
+\end{bmatrix}}
+
+\def\B{
+\begin{bmatrix}
+    ax_0 + bx_1 \\
+    ax_1 + bx_2 \\
+    \vdots \\
+    x_{N-1} + x_N
+\end{bmatrix}}
+
+\def\C{
+\begin{bmatrix}
+    z_1 \\
+    z_2 \\
+    \vdots \\
+    z_N
+\end{bmatrix}}
+
+
+\begin{document}
+
+\maketitle
+
+
+Using linebreaks:\\
+This is how you break a line without starting a new paragraph.
+
+Empty lines between two blocks of text make the second block into a new paragraph.
+
+\hfill \break
+And this is how blank space is inserted.
+
+
+\hfill \break
+
+And this is how blank space is inserted while starting a new paragraph.
+
+
+
+
+\hfill \break
+
+Packages mathtools and amsmath are needed for matricies and such.
+
+
+\hfill \break
+
+The dollar sign is used for inline math equations.
+The escape character \textbackslash followed by [ starts it's own block of math and it is ended by \textbackslash]    This way math is written.
+
+
+
+
+Subscripts in math mode are written as $a_b$ and superscripts are written as $a^b$. These can be combined an nested to write expressions such as
+
+\[ T^{i_1 i_2 \dots i_p}_{j_1 j_2 \dots j_q} = T(x^{i_1},\dots,x^{i_p},e_{j_1},\dots,e_{j_q}) \]
+ 
+We write integrals using $\int$ and fractions using $\frac{a}{b}$. Limits are placed on integrals using superscripts and subscripts:
+
+\[ \int_0^1 \frac{dx}{e^x} =  \frac{e-1}{e} \]
+
+Lower case Greek letters are written as $\omega$ $\delta$ etc. while upper case Greek letters are written as $\Omega$ $\Delta$.
+
+Mathematical operators are prefixed with a backslash as $\sin(\beta)$, $\cos(\alpha)$, $\log(x)$ etc.
+
+
+\hfill \break
+
+
+Splitting a line:
+\begin{equation}
+\begin{split}
+F = \{F_{x} \in  F_{c} &: (|S| > |C|) \\
+ &\quad \cap (\text{minPixels}  < |S| < \text{maxPixels}) \\
+ &\quad \cap (|S_{\text{conected}}| > |S| - \epsilon) \}
+\end{split}
+\end{equation}
+
+
+
+
+Vectors and matices:
+
+$\vec{AB} = 0_E$ \\
+$\overrightarrow{AB} = 0_E$
+$$ \left| \vec{a} \right| $$
+$$ \vec{p}\times \vec{q}=|\vec{p}|\vec{q}|sin\theta \hat{n} $$
+$$ \vec{p}\cdot\vec{q}=|\vec{p}|\vec{q}|cos\theta $$
+
+And vectors are simply written as one-column matices.
+
+$\begin{bmatrix}
+    x_{1} \\
+    x_{2} \\
+    \vdots \\
+	x_{m}
+\end{bmatrix}$
+
+
+
+% https://www.overleaf.com/learn/latex/Matrices
+\[
+\begin{matrix}
+1 & 2 & 3\\
+a & b & c
+\end{matrix}
+\]
+
+\[
+\begin{pmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{pmatrix}
+\]
+
+$\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}$
+
+$\begin{vmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{vmatrix}$
+
+$\begin{Vmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{Vmatrix}$
+
+
+
+
+
+
+
+
+\begin{equation}
+y =\A \left( \B - \C \right)
+\end{equation}
+
+
+
+
+
+
+
+
+Here i have to use "aligned". On the internet they say "align" is used.
+I don't know, but the error said to use aligned and it works now.
+
+\[
+  \begin{aligned}
+    y &= (x_{1},x_{2},\cdots, x_{N})
+        \begin{pmatrix}
+          \begin{bmatrix}
+           ax_{0} + bx_{1} \\           
+           \vdots \\
+           ax_{n-1}+bx_{n}
+          \end{bmatrix} -
+          \begin{bmatrix}
+           z_{1} \\
+           \vdots \\
+           z_{n}
+         \end{bmatrix}
+    \end{pmatrix}
+  \end{aligned}
+\]
+
+
+
+
+
+
+
+\end{document}
